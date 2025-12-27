@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class TweenAnimationExample extends StatelessWidget {
+  const TweenAnimationExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +19,8 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin{
-
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   late Animation animation;
   late AnimationController animationController;
 
@@ -35,7 +31,6 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         title: const Text('Mapping List'),
         backgroundColor: Colors.purpleAccent,
       ),
-
     );
   }
 }

@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CrossFadeExample extends StatelessWidget {
+  const CrossFadeExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
             color: const Color.fromARGB(255, 50, 149, 33),
             child: Image.asset(
               'assets/images/Red.png',
-              height: 250,
+              height: 200,
             ),
           ),
           secondChild: Container(
@@ -62,12 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if (isFirst) {
-            isFirst = false;
-          } else {
-            isFirst = true;
-          }
-          setState(() {});
+          setState(() {
+            if (isFirst) {
+              isFirst = false;
+            } else {
+              isFirst = true;
+            }
+          });
         },
         child: const Icon(
           Icons.call_to_action,

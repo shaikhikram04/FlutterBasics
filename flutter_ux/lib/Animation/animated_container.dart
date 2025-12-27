@@ -1,13 +1,9 @@
-
 import 'dart:core';
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AnimatedContainerExample extends StatelessWidget {
+  const AnimatedContainerExample({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +23,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final List<double> _width = [100.0, 150.0, 180.0, 150.0, 254.0, 110.0, 345.0, 80.0];
-  final List<double> _height = [200.0, 190.0, 100.5, 256.0, 400.0, 349.0, 100.0, 275.0];
+  final List<double> _width = [
+    100.0,
+    150.0,
+    180.0,
+    150.0,
+    254.0,
+    110.0,
+    345.0,
+    80.0
+  ];
+  final List<double> _height = [
+    200.0,
+    190.0,
+    100.5,
+    256.0,
+    400.0,
+    349.0,
+    100.0,
+    275.0
+  ];
   var _index = 0;
   final _containerBgColor = [
     Colors.redAccent,
@@ -75,7 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   _index = (_index + 1) % _containerBgColor.length;
                 });
               },
-
               child: const Text(
                 'Animate',
                 style: TextStyle(fontSize: 21, color: Colors.white),
